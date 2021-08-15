@@ -63,6 +63,8 @@
             <!-- <button type="submit" id="submitButton" class="boton" disabled>Enviar</button> -->
         </form>
 
+        <div id="status"></div>
+
         <?php 
             require_once("php/sending.php");
         ?>
@@ -70,13 +72,11 @@
 
 </div>
 
-<div>
-    <a href="index.html" class="regresar">Regresar.</a>
+<div class="centrado">
+    <a href="index.html" class="regresar">Home.</a>
 </div>
 
-    <!-- <script src="js/scripts.js"></script>  -->
     <script src="js/formulario.js"></script>
-    <!-- <script src="js/modal.js"></script> -->
 </body>
 
 </html>

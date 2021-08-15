@@ -1,49 +1,35 @@
 window.addEventListener('load', ()=> {
 	var button = document.querySelectorAll('.ver')
-    var button2 = document.querySelectorAll('.ver2')
+    var ventan = document.querySelectorAll('.ventan')
+    var imagenes = document.querySelectorAll('.vista')
 	var open = false
 
-    button.forEach(btn => {
+    button.forEach((btn, i)=> {
         btn.addEventListener('click', (e)=> {
             e.preventDefault();
-    
-            if (!open){
-                btn.innerHTML = "Cerrar"
-                open = true
-            }else{
-                btn.innerHTML = "Mostrar"
-                open = false
-            }
 
-            var ventan = document.querySelector('.Ventan')
-
-            ventan.classList.toggle('show')
-             
+                if (!open){
+                    btn.innerHTML = "Cerrar"
+                    ventan[i].classList.toggle('show');
+                    open = true
+                }else{
+                    btn.innerHTML = "Ver"
+                    ventan[i].classList.toggle('show');
+                    open = false
+                }
 
         })
       })
 
-      button2.forEach(btn2 => {
-        btn2.addEventListener('click', (e)=> {
-            e.preventDefault();
-    
-            if (!open){
-                btn2.innerHTML = "Cerrar"
-                open = true
-            }else{
-                btn2.innerHTML = "Mostrar"
-                open = false
-            }
+    var gallery = document.querySelectorAll('.galeria')
 
-            var ventan2 = document.querySelector('.Ventan2')
-
-            
-            ventan2.classList.toggle('show')
-             
-
+    gallery.forEach((photo, i)=> {
+        photo.addEventListener('click', (e) => {
+        e.target.classList.toggle('bigger')
         })
-      })
+    })
+
     
 
-	
+
 })
